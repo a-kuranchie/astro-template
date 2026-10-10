@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact Me">
+  <main class="h-screen w-full flex items-center justify-center px-6">
+    <div class="text-center max-w-lg space-y-6">
+      <h1 class="contact-elem text-5xl font-bold tracking-tight text-zinc-900">
+        Get in touch
+      </h1>
+
+      <p class="contact-elem text-lg text-zinc-600">
+        Have a project in mind, an
+        opportunity, or just want to say
+        hi? Feel free to drop a message.
+      </p>
+
+      <div class="contact-elem pt-2">
+        <a
+          href="mailto:hello@example.com"
+          class="inline-block text-xl font-medium text-blue-600 hover:text-blue-700 underline underline-offset-4 transition-colors"
+        >
+          hello@example.com
+        </a>
+      </div>
+
+      <div class="contact-elem flex items-center justify-center gap-6 pt-4 text-sm font-medium text-zinc-500">
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-zinc-900 transition-colors"
+        >
+          GitHub
+        </a>
+        <span class="text-zinc-300">
+          •
+        </span>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-zinc-900 transition-colors"
+        >
+          LinkedIn
+        </a>
+        <span class="text-zinc-300">
+          •
+        </span>
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-zinc-900 transition-colors"
+        >
+          Twitter / X
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  import gsap from "gsap";
+
+  gsap.from(".contact-elem", {
+    y: 24,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.12,
+    ease: "power3.out",
+    delay: 0.15,
+  });
+</script>

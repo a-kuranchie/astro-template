@@ -1,0 +1,23 @@
+---
+import { navLinks } from "../data/links";
+---
+
+<header class="container mx-auto my-4">
+  <nav
+    class="flex justify-between invisible"
+    data-transition="frame"
+  >
+    <a href="/" class="logo uppercase">
+      Template
+    </a>
+    <ul class="nav-links flex gap-2 font-semibold">
+      {navLinks.map((link) => (
+        <li class="hover:text-red-400">
+          <a href={link.href}>
+            .{link.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

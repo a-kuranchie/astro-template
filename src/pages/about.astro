@@ -1,0 +1,10 @@
+---
+import ThreeScene from "../components/react/ThreeScene";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title={"About"}>
+  <section class="h-full">
+    <ThreeScene client:only="react" />
+  </section>
+</Layout>

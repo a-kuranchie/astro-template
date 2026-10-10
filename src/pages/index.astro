@@ -1,16 +1,50 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import { Warp } from "@paper-design/shaders-react";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Home page">
+  <main class="container mx-auto h-full flex justify-center items-center flex-col space-y-2 invisible mix-blend-difference text-white">
+    <h1 class="text-6xl font-bold tracking-tight overflow-clip">
+      Astro Template
+    </h1>
+    <p class="text-2xl">
+      With GSAP + Lenis + TailwindCSS
+    </p>
+  </main>
+  <!-- <NeuroNoise
+    width={1280}
+    height={720}
+    colorFront="#00c8ff"
+    colorMid="#ff6467"
+    colorBack="#F8F9FA"
+    brightness={0.09}
+    contrast={0.6}
+    speed={1}
+    scale={3}
+    client:only="react"
+
+    className="fixed inset-0 -z-5 min-w-screen max-h-screen"
+  /> -->
+
+  <Warp
+    width={1280}
+    height={720}
+    colors={[
+      "#F8F9FA",
+      "#9470ff",
+      "#121212",
+      "#8838ff",
+    ]}
+    proportion={0.45}
+    softness={1}
+    distortion={0.25}
+    swirl={0.8}
+    swirlIterations={10}
+    shape="checks"
+    shapeScale={0.1}
+    speed={1}
+    className="fixed inset-0 -z-5 min-w-screen max-h-screen pointer-events-none"
+    client:only="react"
+  />
+</Layout>

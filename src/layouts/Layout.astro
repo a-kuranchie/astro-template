@@ -1,0 +1,34 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+interface LayoutProps {
+  title?: string;
+}
+
+const {
+  title = "Astro Template + GSAP + Lenis + Tailwind",
+} = Astro.props as LayoutProps;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="grid grid-rows-[auto_1fr_auto] min-h-screen bg-[#F8F9FA]">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<script>
+  import { initPageAnimations } from "../scripts/animation";
+
+  initPageAnimations();
+</script>
